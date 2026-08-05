@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Segmentation">
-  <meta property="og:title" content="TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Segmentation"/>
-  <meta property="og:description" content="A unified instance segmentation framework for joint gas leak and fire segmentation, achieving 47.0% mask mAP at 23.5 FPS on Jetson AGX Orin."/>
+  <meta name="description" content="TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Monitoring">
+  <meta property="og:title" content="TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Monitoring"/>
+  <meta property="og:description" content="A unified instance segmentation framework for joint gas leak and fire monitoring, achieving 47.0% mask mAP at 23.5 FPS on Jetson AGX Orin."/>
   <meta property="og:image" content="https://drive.google.com/thumbnail?id=1zrnPm6DqS1GUcgOxtI-BXK0BjKaEyoX_&sz=w1200"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="industrial safety, instance segmentation, multimodal fusion, transparency modeling, fire detection, gas leak detection, edge computing, TLD-Net, UIHB">
-  <title>TLD-Net: Gas Leak &amp; Fire Segmentation</title>
+  <title>TLD-Net: Gas Leak &amp; Fire Monitoring</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -115,7 +115,7 @@
           <div class="venue-badge">IEEE Transactions on Instrumentation and Measurement &nbsp;&middot;&nbsp; Under Review &nbsp;&middot;&nbsp; 2026</div>
 
           <h1 class="title is-2 publication-title" style="margin-top:0.6rem;">
-            TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Segmentation
+            TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Monitoring
           </h1>
 
           <div class="is-size-5 publication-authors" style="margin-top:1rem;">
@@ -190,12 +190,13 @@
             plumes exhibit weak, diffuse boundaries in infrared imagery, while fire regions produce extreme
             luminance variation that degrades feature representation. To address these challenges, we
             propose the <b>Transparency-Luminance Disentangled Network (TLD-Net)</b>, a unified instance
-            segmentation framework for simultaneous gas leak and fire segmentation from multimodal
+            segmentation framework for simultaneous gas leak and fire monitoring from multimodal
             industrial imagery. TLD-Net comprises three complementary modules: <b>Scale-Recurrent Pyramid
             Enhancement (SRPE)</b>, which iteratively refines multi-scale features through ConvGRU-based
             recurrent context propagation to improve small-object representation, <b>Transparency-Aware Gas
             Detection (TAGD)</b>, which estimates mask-guided displacement fields to compensate for
-            refractive distortion and recover transparent gas boundaries, and an <b>Asymmetric Causal
+            refractive distortion and recover transparent gas boundaries, providing a measurable indicator
+            of local distortion severity, and an <b>Asymmetric Causal
             Reasoning Module (ACRM)</b>, which models the directional physical dependency between gas and
             fire through gradient-isolated causal gating. To support this framework, we introduce the
             <b>Unified Industrial Hazard Benchmark (UIHB)</b>, comprising <b>7,977 images</b> with
@@ -322,7 +323,7 @@
     <div class="columns is-centered" style="margin-top:1.5rem;">
       <div class="column is-full">
         <figure class="image dataset-figure">
-          <img src="https://drive.google.com/thumbnail?id=137o1pwsIBH4mp1iv3u1nisUwCfbif3Wi&sz=w1200"
+          <img src="https://drive.google.com/thumbnail?id=1hIGPFvKIKwJA-_0aEJ25BpzzooNEW06l&sz=w1200"
                alt="UIHB benchmark split statistics">
           <figcaption>UIHB benchmark split statistics — image and instance counts by train/val/test split and by scale (small/medium/large) across gas and fire categories.</figcaption>
         </figure>
@@ -377,7 +378,7 @@
     <div class="columns is-multiline is-centered">
       <div class="column is-full">
         <figure class="image result-figure">
-          <img src="https://drive.google.com/thumbnail?id=1hIGPFvKIKwJA-_0aEJ25BpzzooNEW06l&sz=w1200"
+          <img src="https://drive.google.com/thumbnail?id=137o1pwsIBH4mp1iv3u1nisUwCfbif3Wi&sz=w1200"
                alt="Progressive module ablation results">
           <figcaption>Progressive module ablation on UIHB (Cascade R-CNN baseline &rarr; +SRPE &rarr; +SRPE+TAGD &rarr; full TLD-Net), showing mask AP and AP<sub>L</sub> gains as SRPE, TAGD, and ACRM are added.</figcaption>
         </figure>
@@ -432,7 +433,7 @@
     <div class="bibtex-box">
       <pre><code>@article{ayaz2026tldnet,
   title   = {Transparency-Luminance Disentangled Network for Unified
-             Industrial Gas Leak and Fire Segmentation},
+             Industrial Gas Leak and Fire Monitoring},
   author  = {Ayaz, Muhammad and Amin, Sareer Ul and Munsif, Muhammad
              and Khan, Salman and Ryu, Jung Hun and Seo, Sanghyun},
   journal = {IEEE Transactions on Instrumentation and Measurement},
@@ -455,9 +456,9 @@
           </p>
           <p>
             Page built using the
-            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" style="color:#e67e22;">
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" style="color:#2bb3d1;">
               Academic Project Page Template</a>.
-            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" style="color:#e67e22;">CC BY-SA 4.0</a>.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" style="color:#2bb3d1;">CC BY-SA 4.0</a>.
           </p>
         </div>
       </div>
