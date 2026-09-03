@@ -383,11 +383,466 @@
           <figcaption>Multi-metric progressive ablation. The four panels report mask mAP, mAP<sub>75</sub>, AP<sub>S</sub>, and AP<sub>L</sub> as modules are added to the Cascade R-CNN baseline. Green &Delta; labels show incremental improvements. The decomposition confirms that the three TLD-Net modules address complementary weaknesses of the plain cascade baseline.</figcaption>
         </figure>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ QUALITATIVE RESULTS ══════════════════════ -->
+<section class="section dpaf-dark-section" id="results">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-heading has-text-centered" style="color:#fff;">Qualitative Results</h2>
+    <p class="has-text-centered" style="color:#ccc; margin-bottom:1.5rem; font-size:.95rem;">
+      Grad-CAM attention analysis, gas-leak scale predictions, and multimodal (RGB / infrared / OGI) qualitative results
+    </p>
+
+    <div class="columns is-multiline is-centered">
       <div class="column is-full">
         <figure class="image result-figure">
-          <img src="https://drive.google.com/thumbnail?id=1hIGPFvKIKwJA-_0aEJ25BpzzooNEW06l&sz=w1200"
-               alt="Backbone architecture trade-off">
-          <figcaption>Backbone architecture trade-off for TLD-Net on UIHB. Each bubble is one backbone; area &prop; parameter count. ConvNeXt-Base achieves the top mAP but at high computational cost. ResNet-50 (&#9733;, the paper default) occupies the Pareto-optimal region balancing accuracy and speed. Swin transformers consistently lag behind CNN counterparts of equivalent size, suggesting CNN inductive biases better match infrared hazard textures.</figcaption>
+          <img src="https://drive.google.com/thumbnail?id=1BypP73TjWAjM8YfcWrfkjSs5W0y_SYj_&sz=w1200" alt="Grad-CAM activation maps for fire and gas">
+          <figcaption>Grad-CAM activation maps for fire (RGB and infrared) and gas (infrared) scenes, alongside final predicted masks. Grad-CAM highlights spatial regions driving the model's predictions, concentrating within the hazard regions for both modalities.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-full">
+        <figure class="image result-figure">
+          <img src="https://drive.google.com/thumbnail?id=1eOeo3n7PXEQoJBiKHnpkJDAOMdnTloIw&sz=w1200" alt="TLD-Net predictions on small-scale and large-scale gas leaks">
+          <figcaption>TLD-Net predictions across small-scale and large-scale gas leaks. For each scale, rows alternate between the ground-truth label (white) and the predicted mask (cyan) with per-instance confidence scores. TLD-Net accurately localizes both compact, low-signature plumes and large, diffuse multi-instance leaks across varying scenes and timestamps.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-full">
+        <figure class="image result-figure">
+          <img src="https://drive.google.com/thumbnail?id=14oA0EPgoMXigRlxj08aWZ__LelJ2BHrC&sz=w1200" alt="Representative qualitative results across RGB, infrared, and OGI modalities">
+          <figcaption>Representative qualitative results of the proposed TLD-Net. The first and third rows show the input RGB, infrared (IR), and optical gas imaging (OGI) images, and the second and fourth rows show the corresponding predicted instance masks. The proposed framework accurately segments fire and gas instances across diverse environmental conditions, object scales, and imaging modalities.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ CITATION ══════════════════════ -->
+<section class="section" id="citation">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-heading has-text-centered">Citation</h2>
+    <p class="has-text-centered" style="color:#666; margin-bottom:1.5rem;">If you find this work useful, please cite it as:</p>
+    <div class="bibtex-box">
+      <pre><code>@article{ayaz2026tldnet,
+  title   = {Transparency-Luminance Disentangled Network for Unified
+             Industrial Gas Leak and Fire Monitoring},
+  author  = {Ayaz, Muhammad and Amin, Sareer Ul and Munsif, Muhammad
+             and Khan, Salman and Ryu, Jung Hun and Seo, Sanghyun},
+  journal = {},
+  year    = {2026}
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer" style="background:#111;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered" style="color:#aaa;">
+          <p>
+            <b style="color:#fff;">TLD-Net</b> &nbsp;&middot;&nbsp; &nbsp;&middot;&nbsp; 2026<br>
+            Chung-Ang University &nbsp;|&nbsp; UNIST &nbsp;|&nbsp; Oxford Brookes University
+          </p>
+          <p>
+            Page built using the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" style="color:#2bb3d1;">
+              Academic Project Page Template</a>.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" style="color:#2bb3d1;">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Monitoring">
+  <meta property="og:title" content="TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Monitoring"/>
+  <meta property="og:description" content="A unified instance segmentation framework for joint gas leak and fire monitoring, achieving 47.0% mask mAP at 23.5 FPS on Jetson AGX Orin."/>
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1zrnPm6DqS1GUcgOxtI-BXK0BjKaEyoX_&sz=w1200"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="industrial safety, instance segmentation, multimodal fusion, transparency modeling, fire detection, gas leak detection, edge computing, TLD-Net, UIHB">
+  <title>TLD-Net: Gas Leak &amp; Fire Monitoring</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body { overflow-x: hidden; width: 100%; }
+
+    @media screen and (max-width: 768px) {
+      .navbar-menu { display:block!important; background:#111; padding:.5rem 0; }
+      .navbar-start { flex-direction:column; }
+      .navbar-item.has-dropdown { width:100%; }
+      .navbar-link { width:100%; display:block; padding:.75rem 1rem; }
+      .navbar-dropdown { position:static!important; display:block!important; background:#1a1a1a!important; box-shadow:none; padding:0; }
+      .navbar-dropdown .navbar-item { padding:.5rem 1.5rem; font-size:.85rem; }
+      .publication-title { font-size:1.4rem!important; line-height:1.4!important; }
+      .is-size-5.publication-authors { font-size:.95rem!important; }
+      .is-size-6.publication-authors { font-size:.8rem!important; }
+      .venue-badge { font-size:.75rem!important; padding:.3rem .8rem!important; }
+      .tldr-box { font-size:.9rem!important; padding:1rem!important; margin:1rem .5rem 0!important; text-align:left; }
+      .publication-links { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; }
+      .title.is-3.section-heading { font-size:1.4rem!important; }
+      .section { padding:2rem 1rem!important; }
+      .highlight-grid .column { width:100%!important; padding:.4rem!important; }
+      .highlight-card { padding:1rem!important; font-size:.9rem!important; }
+      .dataset-stats { flex-wrap:wrap!important; }
+      .dataset-stats .column { width:50%!important; padding:.4rem!important; }
+      .stat-number { font-size:1.5rem!important; }
+      .stat-card { padding:.75rem .5rem!important; margin:.25rem!important; }
+      .table-container { overflow-x:auto!important; -webkit-overflow-scrolling:touch; }
+      .dpaf-table { font-size:.75rem!important; min-width:500px; }
+      .dpaf-table th, .dpaf-table td { padding:.4rem .5rem!important; white-space:nowrap; }
+      .bibtex-box { font-size:.75rem!important; padding:1rem!important; overflow-x:auto; }
+      .bibtex-box pre { white-space:pre-wrap!important; word-break:break-word!important; }
+      footer .content p { font-size:.8rem!important; }
+    }
+
+    @media screen and (min-width:769px) and (max-width:1023px) {
+      .publication-title { font-size:1.6rem!important; }
+      .dpaf-table { font-size:.85rem!important; }
+    }
+
+    .arch-image-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      margin: 0 auto;
+      max-width: 900px;
+    }
+    .arch-image-wrapper img { width: 100%; height: auto; display: block; }
+    .arch-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav class="navbar is-black" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow:1; justify-content:center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" style="color:#fff;">Sections</a>
+        <div class="navbar-dropdown" style="background:#1a1a1a;">
+          <a class="navbar-item" href="#abstract">Abstract</a>
+          <a class="navbar-item" href="#architecture">Architecture</a>
+          <a class="navbar-item" href="#dataset">Dataset</a>
+          <a class="navbar-item" href="#quantitative">Quantitative Results</a>
+          <a class="navbar-item" href="#results">Qualitative Results</a>
+          <a class="navbar-item" href="#citation">Citation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero dpaf-hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <div class="venue-badge"> &nbsp;&middot;&nbsp; 2026</div>
+
+          <h1 class="title is-2 publication-title" style="margin-top:0.6rem;">
+            TLD-Net: Transparency-Luminance Disentangled Network for Unified Industrial Gas Leak and Fire Monitoring
+          </h1>
+
+          <div class="is-size-5 publication-authors" style="margin-top:1rem;">
+            <span class="author-block">Muhammad Ayaz<sup>1</sup>,</span>
+            <span class="author-block">Sareer Ul Amin<sup>1</sup>,</span>
+            <span class="author-block">Muhammad Munsif<sup>2</sup>,</span>
+            <span class="author-block">Salman Khan<sup>3</sup>,</span>
+            <span class="author-block">Jung Hun Ryu<sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:sanghyun@cau.ac.kr" target="_blank">Sanghyun Seo<sup>1,*</sup></a>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="margin-top:0.5rem; color:#ccc;">
+            <sup>1</sup> Chung-Ang University, Republic of Korea &nbsp;|&nbsp;
+            <sup>2</sup> Ulsan National Institute of Science and Technology (UNIST), Republic of Korea &nbsp;|&nbsp;
+            <sup>3</sup> Oxford Brookes University, United Kingdom
+            <br>
+            <small style="color:#aaa;"><sup>*</sup> Corresponding Author &nbsp;&middot;&nbsp; sanghyun@cau.ac.kr</small>
+          </div>
+
+          <div class="column has-text-centered" style="margin-top:1.2rem;">
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span>UIHB Dataset (Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="tldr-box">
+            <b>TLD-Net</b> is a unified instance segmentation framework that jointly detects and segments
+            <b>gas leaks and fire</b> from multimodal industrial imagery through three complementary modules —
+            <b>SRPE</b>, <b>TAGD</b>, and <b>ACRM</b> — achieving <b>47.0% mask mAP</b> (+2.6 pts overall, +5.2 pts
+            at AP<sub>75</sub>) on the new 7,977-image <b>UIHB</b> benchmark, with TensorRT INT8 deployment
+            reaching <b>23.5 FPS</b> on an NVIDIA Jetson AGX Orin.
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ABSTRACT ══════════════════════ -->
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-heading">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Gas leaks and fire outbreaks are critical industrial hazards that frequently co-occur, posing
+            serious risks to infrastructure and safety. Existing perception systems address these hazards
+            using separate task-specific pipelines with incompatible sensing modalities, resulting in
+            redundant sensors, duplicated computation, and fragmented scene understanding. These systems
+            are further limited by the <b>transparency-luminance ambiguity</b>, where semi-transparent gas
+            plumes exhibit weak, diffuse boundaries in infrared imagery, while fire regions produce extreme
+            luminance variation that degrades feature representation. To address these challenges, we
+            propose the <b>Transparency-Luminance Disentangled Network (TLD-Net)</b>, a unified instance
+            segmentation framework for simultaneous gas leak and fire monitoring from multimodal
+            industrial imagery. TLD-Net comprises three complementary modules: <b>Scale-Recurrent Pyramid
+            Enhancement (SRPE)</b>, which iteratively refines multi-scale features through ConvGRU-based
+            recurrent context propagation to improve small-object representation, <b>Transparency-Aware Gas
+            Detection (TAGD)</b>, which estimates mask-guided displacement fields to compensate for
+            refractive distortion and recover transparent gas boundaries, providing a measurable indicator
+            of local distortion severity, and an <b>Asymmetric Causal
+            Reasoning Module (ACRM)</b>, which models the directional physical dependency between gas and
+            fire through gradient-isolated causal gating. To support this framework, we introduce the
+            <b>Unified Industrial Hazard Benchmark (UIHB)</b>, comprising <b>7,977 images</b> with
+            <b>11,397 instance-level annotations</b>. On this benchmark, TLD-Net achieves
+            <b>47.0% mask mAP</b>, outperforming the baseline by 2.6 percentage points overall and 5.2
+            percentage points at AP<sub>75</sub>, with TensorRT INT8 deployment reaching
+            <b>23.5 FPS</b> on an NVIDIA Jetson AGX Orin, demonstrating practicality for real-time
+            industrial hazard monitoring.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ HIGHLIGHTS ══════════════════════ -->
+<section class="section dpaf-dark-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-heading has-text-centered" style="color:#fff;">Highlights</h2>
+    <div class="columns is-centered is-multiline highlight-grid">
+      <div class="column is-one-third-desktop is-half-tablet">
+        <div class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-layer-group"></i></div>
+          <h4>Scale-Recurrent Pyramid Enhancement</h4>
+          <p>A recurrent ConvGRU-based multi-scale neck replacing static FPN, letting fine pyramid levels progressively accumulate semantic context over three passes for better small and partially occluded hazard detection.</p>
+        </div>
+      </div>
+      <div class="column is-one-third-desktop is-half-tablet">
+        <div class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-cloud"></i></div>
+          <h4>Transparency-Aware Gas Detection</h4>
+          <p>Learns a dense displacement field to model refractive distortion from semi-transparent gas plumes, producing distortion-aligned features for tighter, more physically grounded gas boundary masks.</p>
+        </div>
+      </div>
+      <div class="column is-one-third-desktop is-half-tablet">
+        <div class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-fire"></i></div>
+          <h4>Asymmetric Causal Reasoning Module</h4>
+          <p>Gradient-isolated causal gating encodes the physical gas&rarr;fire precedence, letting gas context selectively enhance fire features without entangling the two hazard representations.</p>
+        </div>
+      </div>
+      <div class="column is-one-third-desktop is-half-tablet">
+        <div class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h4>47.0% mAP &middot; 23.5 FPS</h4>
+          <p>+2.6 pts over the strongest baseline overall and +5.2 pts at AP<sub>75</sub>, with real-time TensorRT INT8 edge deployment on an NVIDIA Jetson AGX Orin.</p>
+        </div>
+      </div>
+      <div class="column is-one-third-desktop is-half-tablet">
+        <div class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-database"></i></div>
+          <h4>UIHB Benchmark</h4>
+          <p>7,977 images and 11,397 instance-level annotations across co-registered infrared and RGB sources, with Jaccard&nbsp;&gt;&nbsp;0.85 inter-annotator agreement — the first cross-hazard instance segmentation benchmark.</p>
+        </div>
+      </div>
+      <div class="column is-one-third-desktop is-half-tablet">
+        <div class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-search"></i></div>
+          <h4>Zero-Shot Generalization</h4>
+          <p>43.8% mAP on unseen gas-only data and 41.6% mAP on unseen fire-only data, confirming domain-robust representations rather than overfitting to UIHB's co-occurrence statistics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ARCHITECTURE ══════════════════════ -->
+<section class="section" id="architecture">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-heading has-text-centered">Architecture</h2>
+    <div class="arch-image-wrapper">
+      <img src="https://drive.google.com/thumbnail?id=1zrnPm6DqS1GUcgOxtI-BXK0BjKaEyoX_&sz=w1200"
+           alt="TLD-Net overall architecture diagram">
+    </div>
+    <p class="arch-caption">
+      Overview of TLD-Net. A ResNet backbone feeds the SRPE neck, producing a recurrently refined
+      five-level pyramid. TAGD estimates gas distortion from P<sub>2</sub> and injects distortion
+      features into the mask branch. ACRM causally gates fire features using a gas objectness prior.
+      A three-stage Cascade R-CNN head produces per-instance masks for gas and fire simultaneously.
+    </p>
+
+    <div class="arch-image-wrapper" style="margin-top:3rem;">
+      <img src="https://drive.google.com/thumbnail?id=1QDDouq3zcHKMhfJRV9sWsv28SSW6TcCd&sz=w1200"
+           alt="SRPE recurrent refinement evolution">
+    </div>
+    <p class="arch-caption">
+      Evolution of the P<sub>2</sub> feature map through SRPE's recurrent refinement across three
+      representative scenes. From left: input image, FPN initialization, and successive ConvGRU
+      passes (T=1, 2, 3). Fine-grained, blocky activations present at initialization are progressively
+      smoothed and consolidated into coherent regional structure by the final pass, reflecting the
+      multi-hop propagation of semantic context from coarser pyramid levels.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════ DATASET ══════════════════════ -->
+<section class="section dpaf-dark-section" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-heading has-text-centered" style="color:#fff;">UIHB: Unified Industrial Hazard Benchmark</h2>
+    <p class="has-text-centered" style="color:#ccc; margin-bottom:2rem;">
+      7,977 images &middot; Instance-level gas + fire annotations &middot; Polygon masks &middot;
+      Co-registered infrared/RGB &middot; Co-occurrence flags
+    </p>
+
+    <div class="columns is-centered dataset-stats">
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">7,977</div>
+        <div class="stat-label">Total Images</div>
+      </div>
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">11,397</div>
+        <div class="stat-label">Instance Annotations</div>
+      </div>
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Classes (Gas, Fire)</div>
+      </div>
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">Polygon</div>
+        <div class="stat-label">Mask Type</div>
+      </div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top:1.5rem;">
+      <div class="column is-full">
+        <figure class="image dataset-figure">
+          <img src="https://drive.google.com/thumbnail?id=1NeatGX3dgNgavU-Ts2HX9yjCNT4r3e63&sz=w1200"
+               alt="UIHB dataset statistics">
+          <figcaption>UIHB dataset statistics. Left: total image and instance counts per split (train/val/test). Centre-left: per-category instance counts (gas vs. fire) per split. Centre-right: instance-scale distribution (small &lt; 32<sup>2</sup> px, medium 32<sup>2</sup>&ndash;96<sup>2</sup> px, large &gt; 96<sup>2</sup> px) shown as donut charts. Right: instance area histogram on a logarithmic axis across all splits; dashed vertical lines mark the COCO small/medium/large boundaries. The dataset is dominated by medium-to-large instances, but retains a non-trivial small-object fraction that challenges coarse-stride detectors.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h3 class="title is-5 has-text-centered" style="margin-top:2.5rem; color:#fff;">Dataset Comparison</h3>
+    <div class="table-container" style="margin-top:1rem;">
+      <table class="table is-striped is-hoverable is-fullwidth dpaf-table">
+        <thead>
+          <tr><th>Dataset</th><th>Venue, Year</th><th>Samples</th><th>Annotations</th><th>Gas</th><th>Fire</th><th>Co-occ.</th><th>Domain</th><th>Modality</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BowFire</td><td>SIBGRAPI, 2015</td><td>226</td><td>Sem</td><td></td><td>&#10003;</td><td></td><td>General</td><td>RGB</td></tr>
+          <tr><td>IoT-Fire</td><td>IEEE T-ITS, 2022</td><td>600</td><td>Sem</td><td></td><td>&#10003;</td><td></td><td>Transport</td><td>RGB</td></tr>
+          <tr><td>Gas-DB</td><td>CVIU, 2024</td><td>1.3K</td><td>Sem</td><td>&#10003;</td><td></td><td></td><td>Industrial</td><td>IR+RGB</td></tr>
+          <tr><td>GasSeg</td><td>PR, 2026</td><td>6.4K</td><td>Sem</td><td>&#10003;</td><td></td><td></td><td>Industrial</td><td>IR</td></tr>
+          <tr class="dpaf-best-row">
+            <td><b>UIHB (Ours)</b></td><td><b>2026</b></td><td><b>8.0K</b></td><td><b>Inst</b></td>
+            <td><b>&#10003;</b></td><td><b>&#10003;</b></td><td><b>&#10003;</b></td><td><b>Industrial</b></td><td><b>IR+RGB</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ QUANTITATIVE RESULTS ══════════════════════ -->
+<section class="section" id="quantitative">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-heading has-text-centered">Quantitative Results</h2>
+
+    <div class="columns is-centered dataset-stats" style="margin-bottom:2rem;">
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">47.0%</div>
+        <div class="stat-label">Mask mAP</div>
+      </div>
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">+2.6</div>
+        <div class="stat-label">pts over best baseline</div>
+      </div>
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">+5.2</div>
+        <div class="stat-label">pts at AP<sub>75</sub></div>
+      </div>
+      <div class="column has-text-centered stat-card">
+        <div class="stat-number">23.5 FPS</div>
+        <div class="stat-label">TensorRT INT8, Jetson AGX Orin</div>
+      </div>
+    </div>
+
+    <div class="columns is-multiline is-centered">
+      <div class="column is-full">
+        <figure class="image result-figure">
+          <img src="https://drive.google.com/thumbnail?id=137o1pwsIBH4mp1iv3u1nisUwCfbif3Wi&sz=w1200"
+               alt="Multi-metric progressive ablation results">
+          <figcaption>Multi-metric progressive ablation. The four panels report mask mAP, mAP<sub>75</sub>, AP<sub>S</sub>, and AP<sub>L</sub> as modules are added to the Cascade R-CNN baseline. Green &Delta; labels show incremental improvements. The decomposition confirms that the three TLD-Net modules address complementary weaknesses of the plain cascade baseline.</figcaption>
         </figure>
       </div>
     </div>
@@ -450,7 +905,7 @@
       <div class="column is-8">
         <div class="content has-text-centered" style="color:#aaa;">
           <p>
-            <b style="color:#fff;">TLD-Net</b> &nbsp;&middot;&nbsp; IEEE Transactions on Instrumentation and Measurement &nbsp;&middot;&nbsp; 2026<br>
+            <b style="color:#fff;">TLD-Net</b> &nbsp;&middot;&nbsp; &nbsp;&middot;&nbsp; 2026<br>
             Chung-Ang University &nbsp;|&nbsp; UNIST &nbsp;|&nbsp; Oxford Brookes University
           </p>
           <p>
